@@ -3,302 +3,515 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firdows Rahaman Mollah | Enterprise AI/ML Lead & Architect</title>
-  <meta name="description" content="Portfolio of Firdows Rahaman Mollah — Enterprise AI/ML Lead & Architect specializing in Agentic AI, Multi-Agent Systems, MCP Gateways, EU AI Act Governance, and Sovereign MLOps.">
+  <meta name="color-scheme" content="dark">
+  <title>Firdows Rahaman | Enterprise AI/ML Lead & Sovereign AI Architect</title>
+  <meta name="description" content="Portfolio of Firdows Rahaman — Enterprise AI/ML Lead & Architect specializing in European Sovereign AI, EU AI Act Compliance (Reg. 2024/1689), Multi-Agent Systems, and Cloud MLOps.">
+  
+  <!-- European Typography: Inter + Plus Jakarta Sans + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Inter"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brand: {
-              50: '#eef2ff',
-              400: '#818cf8',
-              500: '#6366f1',
-              600: '#4f46e5',
+            eu: {
+              blue: '#003399',
+              gold: '#FFCC00',
+            },
+            surface: {
+              DEFAULT: '#0A0E17',
+              card: '#0F1523',
+              border: 'rgba(255, 255, 255, 0.08)',
+              hover: 'rgba(255, 255, 255, 0.12)'
             }
           }
         }
       }
     }
   </script>
+
   <style>
-    body { background-color: #090d16; color: #f1f5f9; }
-    .glass-card {
-      background: rgba(15, 23, 42, 0.65);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: all 0.25s ease-in-out;
+    :root {
+      color-scheme: dark;
+      --bg-base: #070A10;
     }
-    .glass-card:hover {
+    body {
+      background-color: var(--bg-base);
+      color: #E2E8F0;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      scrollbar-color: #334155 transparent;
+      scrollbar-width: thin;
+    }
+    
+    /* European Minimalist Grid Background */
+    .eu-grid-pattern {
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+    }
+
+    /* Precision Card Aesthetics */
+    .eu-card {
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .eu-card:hover {
       border-color: rgba(99, 102, 241, 0.4);
       transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.08);
+    }
+
+    /* Active filter tab */
+    .filter-btn.active {
+      background-color: rgba(99, 102, 241, 0.18);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #FFFFFF;
     }
   </style>
 </head>
-<body class="font-sans antialiased selection:bg-indigo-500 selection:text-white">
+<body class="min-h-screen antialiased selection:bg-indigo-600 selection:text-white eu-grid-pattern flex flex-col justify-between">
+
+  <!-- Regulatory Banner (European Standard) -->
+  <div class="bg-indigo-950/40 border-b border-indigo-500/20 py-1.5 px-4 text-center text-xs text-indigo-300 font-mono tracking-wide flex items-center justify-center gap-2">
+    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+    <span>Sovereign AI Architecture & EU AI Act (Reg. 2024/1689) Conformity • 0% Tracking Cookies • 100% GDPR Compliant</span>
+  </div>
 
   <!-- Navigation -->
-  <nav class="sticky top-0 z-50 bg-[#090d16]/80 backdrop-blur-md border-b border-white/5">
+  <nav class="sticky top-0 z-50 bg-[#070A10]/85 backdrop-blur-md border-b border-white/5">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="font-bold text-lg tracking-tight text-white flex items-center gap-2">
-        <span class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-mono font-bold text-sm">FR</span>
+      <a href="#" class="font-display font-bold text-base sm:text-lg tracking-tight text-white flex items-center gap-2.5">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white flex items-center justify-center font-mono font-bold text-xs shadow-md shadow-indigo-600/30">FR</span>
         <span>Firdows Rahaman</span>
       </a>
-      <div class="hidden md:flex items-center gap-8 text-sm text-slate-400 font-medium">
+
+      <div class="hidden md:flex items-center gap-8 text-sm text-slate-300 font-medium">
         <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#flagships" class="hover:text-white transition">Projects</a>
-        <a href="#expertise" class="hover:text-white transition">Expertise</a>
-        <a href="#governance" class="hover:text-white transition">Governance</a>
-        <a href="#book" class="hover:text-white transition">Book & Papers</a>
+        <a href="#projects" class="hover:text-white transition">Flagships</a>
+        <a href="#compliance" class="hover:text-white transition">EU AI Act Matrix</a>
+        <a href="#sovereignty" class="hover:text-white transition">Sovereign Cloud</a>
+        <a href="#publications" class="hover:text-white transition">Publications</a>
       </div>
-      <div class="flex items-center gap-3">
-        <a href="https://github.com/FirdowsRahaman" target="_blank" class="p-2 text-slate-400 hover:text-white transition" aria-label="GitHub">
+
+      <div class="flex items-center gap-2.5">
+        <a href="https://github.com/FirdowsRahaman" target="_blank" class="p-2 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition" aria-label="GitHub Profile">
           <i data-lucide="github" class="w-5 h-5"></i>
         </a>
-        <a href="https://linkedin.com/in/firdowsrahaman" target="_blank" class="p-2 text-slate-400 hover:text-white transition" aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/firdowsrahaman" target="_blank" class="p-2 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition" aria-label="LinkedIn Profile">
           <i data-lucide="linkedin" class="w-5 h-5"></i>
         </a>
-        <a href="https://github.com/FirdowsRahaman/the-ultimate-collection" target="_blank" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 hover:bg-indigo-500/20 transition">
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-indigo-400"></i> The Ultimate Collection
-        </a>
+        <button id="copyEmailBtn" onclick="copyEmail()" class="inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 transition" title="Copy Contact Email">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-indigo-400"></i>
+          <span id="copyEmailText">Get in Touch</span>
+        </button>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="relative pt-24 pb-20 px-6 max-w-6xl mx-auto overflow-hidden">
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6">
-      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Enterprise AI/ML Lead & Architect
+  <header class="relative pt-20 pb-16 px-6 max-w-6xl mx-auto">
+    <!-- Status Badges -->
+    <div class="flex flex-wrap items-center gap-2.5 mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Enterprise AI/ML Lead & Architect
+      </div>
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+        <i data-lucide="clock" class="w-3.5 h-3.5 text-indigo-400"></i> Central European Time (CET) Overlap
+      </div>
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-blue-500/10 text-blue-300 border border-blue-500/20">
+        <i data-lucide="shield" class="w-3.5 h-3.5 text-blue-400"></i> EU AI Act High-Risk Certified Patterns
+      </div>
     </div>
-    <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl">
-      Architecting <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Enterprise AI Layers</span> & Autonomous Agent Systems
+
+    <!-- Title -->
+    <h1 class="text-4xl sm:text-6xl font-display font-extrabold text-white tracking-tight leading-[1.1] max-w-4xl">
+      Architecting <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-400 to-emerald-400">Sovereign AI Systems</span> & Autonomous Agent Layers
     </h1>
-    <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-3xl leading-relaxed">
-      Transforming enterprise operations through stateful multi-agent systems, secure Model Context Protocol (MCP) gateways, and sovereign AI governance across EMEA, APAC, and US markets.
+
+    <!-- Subtitle -->
+    <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed font-light">
+      I lead the design and production delivery of mission-critical AI/ML platforms. Specializing in stateful multi-agent systems, secure Model Context Protocol (MCP) gateways, and zero-egress sovereign cloud architectures across <span class="text-white font-medium">EMEA, APAC, and US operations</span>.
     </p>
-    <div class="mt-10 flex flex-wrap gap-4 items-center">
-      <a href="#flagships" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-semibold text-white shadow-lg shadow-indigo-600/25 transition flex items-center gap-2 text-sm">
-        Explore Flagship Work <i data-lucide="arrow-right" class="w-4 h-4"></i>
+
+    <!-- CTAs -->
+    <div class="mt-8 flex flex-wrap gap-4 items-center">
+      <a href="#projects" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-semibold text-white shadow-lg shadow-indigo-600/25 transition flex items-center gap-2 text-sm">
+        Explore Flagships <i data-lucide="arrow-right" class="w-4 h-4"></i>
       </a>
-      <a href="https://github.com/FirdowsRahaman/From-Tool-to-Teammate-The-Human-Guide-to-the-Age-of-AI-Agents" target="_blank" class="px-6 py-3 rounded-xl glass-card font-semibold text-slate-200 hover:text-white transition flex items-center gap-2 text-sm">
-        <i data-lucide="book-open" class="w-4 h-4 text-indigo-400"></i> Read Book: From Tool to Teammate
+      <a href="#compliance" class="px-6 py-3 rounded-xl eu-card font-semibold text-slate-200 hover:text-white transition flex items-center gap-2 text-sm">
+        <i data-lucide="scale" class="w-4 h-4 text-emerald-400"></i> EU AI Act Compliance Matrix
       </a>
-      <a href="https://linkedin.com/in/firdowsrahaman" target="_blank" class="px-6 py-3 rounded-xl glass-card font-semibold text-slate-200 hover:text-white transition flex items-center gap-2 text-sm">
-        <i data-lucide="linkedin" class="w-4 h-4 text-sky-400"></i> Connect on LinkedIn
+      <a href="https://github.com/FirdowsRahaman/From-Tool-to-Teammate-The-Human-Guide-to-the-Age-of-AI-Agents" target="_blank" class="px-6 py-3 rounded-xl eu-card font-semibold text-slate-200 hover:text-white transition flex items-center gap-2 text-sm">
+        <i data-lucide="book-open" class="w-4 h-4 text-indigo-400"></i> Read Book (104 pp.)
       </a>
+    </div>
+
+    <!-- Metrics Bar -->
+    <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/5">
+      <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-mono">Specialization</p>
+        <p class="text-lg font-bold text-white mt-1">Multi-Agent & MCP</p>
+      </div>
+      <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-mono">Data Sovereignty</p>
+        <p class="text-lg font-bold text-white mt-1">AWS Frankfurt & vLLM</p>
+      </div>
+      <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-mono">Governance Framework</p>
+        <p class="text-lg font-bold text-white mt-1">EU AI Act • GDPR Art. 9/25</p>
+      </div>
+      <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-mono">Core Models</p>
+        <p class="text-lg font-bold text-white mt-1">Mistral • Open Weights</p>
+      </div>
     </div>
   </header>
 
-  <!-- Flagship Projects -->
-  <section id="flagships" class="py-16 px-6 max-w-6xl mx-auto">
-    <div class="flex items-end justify-between mb-10">
+  <!-- Flagship Projects Section -->
+  <section id="projects" class="py-16 px-6 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
       <div>
-        <p class="text-xs uppercase tracking-widest text-indigo-400 font-semibold mb-2">Portfolio Showcase</p>
-        <h2 class="text-3xl font-bold text-white tracking-tight">Flagship Open-Source Repositories</h2>
+        <p class="text-xs uppercase tracking-widest text-indigo-400 font-semibold mb-1">Production Codebases</p>
+        <h2 class="text-3xl font-display font-bold text-white tracking-tight">Flagship Open-Source Repositories</h2>
       </div>
-      <a href="https://github.com/FirdowsRahaman?tab=repositories" target="_blank" class="text-sm text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center gap-1">
-        All 24 Repositories <i data-lucide="chevron-right" class="w-4 h-4"></i>
-      </a>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+        <button onclick="filterCategory('all')" class="filter-btn active px-3 py-1.5 rounded-lg border border-white/10 text-slate-300 hover:text-white transition">All (9)</button>
+        <button onclick="filterCategory('sovereign')" class="filter-btn px-3 py-1.5 rounded-lg border border-white/10 text-slate-300 hover:text-white transition">Sovereign & Governance</button>
+        <button onclick="filterCategory('agents')" class="filter-btn px-3 py-1.5 rounded-lg border border-white/10 text-slate-300 hover:text-white transition">Agentic AI</button>
+        <button onclick="filterCategory('medical')" class="filter-btn px-3 py-1.5 rounded-lg border border-white/10 text-slate-300 hover:text-white transition">Medical AI</button>
+        <button onclick="filterCategory('infra')" class="filter-btn px-3 py-1.5 rounded-lg border border-white/10 text-slate-300 hover:text-white transition">Cloud MLOps</button>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid">
 
-      <!-- Card 1 -->
-      <a href="https://github.com/FirdowsRahaman/the-ultimate-collection" target="_blank" class="glass-card rounded-2xl p-6 flex flex-col justify-between group">
+      <!-- 1. Sovereign AI Gateway -->
+      <a href="https://github.com/FirdowsRahaman/sovereign-ai-gateway" target="_blank" data-cat="sovereign" class="project-card eu-card rounded-2xl p-6 flex flex-col justify-between group">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <span class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-              <i data-lucide="compass" class="w-5 h-5"></i>
+            <span class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <i data-lucide="shield-alert" class="w-5 h-5"></i>
             </span>
-            <span class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded-md bg-white/5 border border-white/5">110+ Resources</span>
+            <span class="text-xs font-mono text-emerald-400 px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20">EU AI Act Art. 12</span>
           </div>
-          <h3 class="font-bold text-lg text-white group-hover:text-indigo-400 transition">The Ultimate Collection</h3>
-          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
-            Universal, curated index of standout GitHub repositories, developer utilities, autonomous agents, and self-hosted apps.
+          <h3 class="font-display font-bold text-lg text-white group-hover:text-indigo-400 transition">sovereign-ai-gateway</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Enterprise reverse proxy with automatic GDPR PII pseudonymization, SHA-256 tamper-evident audit logging, and data residency guardrails.
           </p>
         </div>
-        <div class="mt-6 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-          <span class="px-2 py-1 rounded bg-slate-800">Awesome-List</span>
-          <span class="px-2 py-1 rounded bg-slate-800">DevTools</span>
-          <span class="px-2 py-1 rounded bg-slate-800">AI Agents</span>
+        <div class="mt-6 flex flex-wrap gap-1.5 text-xs font-mono text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">FastAPI</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Presidio</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Docker</span>
         </div>
       </a>
 
-      <!-- Card 2 -->
-      <a href="https://github.com/FirdowsRahaman/agentic-workflows-masterclass" target="_blank" class="glass-card rounded-2xl p-6 flex flex-col justify-between group">
+      <!-- 2. Agentic Workflows Masterclass -->
+      <a href="https://github.com/FirdowsRahaman/agentic-workflows-masterclass" target="_blank" data-cat="agents" class="project-card eu-card rounded-2xl p-6 flex flex-col justify-between group">
         <div>
           <div class="flex items-center justify-between mb-4">
             <span class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
               <i data-lucide="bot" class="w-5 h-5"></i>
             </span>
-            <span class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded-md bg-white/5 border border-white/5">Masterclass</span>
+            <span class="text-xs font-mono text-indigo-400 px-2.5 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20">LangGraph & Mistral</span>
           </div>
-          <h3 class="font-bold text-lg text-white group-hover:text-indigo-400 transition">Agentic Workflows Masterclass</h3>
-          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
-            Production guide to stateful, autonomous, and multi-agent workflows using LangGraph, Google ADK & Python with real-world labs.
+          <h3 class="font-display font-bold text-lg text-white group-hover:text-indigo-400 transition">agentic-workflows-masterclass</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Stateful multi-agent orchestration guide featuring Mistral AI sovereign inference, EU AI Act Article 14 Human Oversight, and GDPR memory purging.
           </p>
         </div>
-        <div class="mt-6 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-          <span class="px-2 py-1 rounded bg-slate-800">LangGraph</span>
-          <span class="px-2 py-1 rounded bg-slate-800">Multi-Agent</span>
-          <span class="px-2 py-1 rounded bg-slate-800">Python</span>
+        <div class="mt-6 flex flex-wrap gap-1.5 text-xs font-mono text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">LangGraph</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Mistral</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">vLLM</span>
         </div>
       </a>
 
-      <!-- Card 3 -->
-      <a href="https://github.com/FirdowsRahaman/mcp-masterclass" target="_blank" class="glass-card rounded-2xl p-6 flex flex-col justify-between group">
+      <!-- 3. Clinical IVF Morphokinetics AI -->
+      <a href="https://github.com/FirdowsRahaman/clinical-ivf-morphokinetics-ai" target="_blank" data-cat="medical" class="project-card eu-card rounded-2xl p-6 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
+              <i data-lucide="microscope" class="w-5 h-5"></i>
+            </span>
+            <span class="text-xs font-mono text-pink-400 px-2.5 py-1 rounded-md bg-pink-500/10 border border-pink-500/20">MDR Class IIa/IIb</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white group-hover:text-pink-400 transition">clinical-ivf-morphokinetics-ai</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Deep learning computer vision platform for blastocyst segmentation (Attention U-Net), Gardner grading, and ESHRE time-lapse morphokinetics.
+          </p>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-1.5 text-xs font-mono text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">PyTorch</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Gardner-Staging</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">ESHRE</span>
+        </div>
+      </a>
+
+      <!-- 4. MCP Masterclass -->
+      <a href="https://github.com/FirdowsRahaman/mcp-masterclass" target="_blank" data-cat="agents sovereign" class="project-card eu-card rounded-2xl p-6 flex flex-col justify-between group">
         <div>
           <div class="flex items-center justify-between mb-4">
             <span class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
               <i data-lucide="shield-check" class="w-5 h-5"></i>
             </span>
-            <span class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded-md bg-white/5 border border-white/5">FastMCP</span>
+            <span class="text-xs font-mono text-blue-400 px-2.5 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">FastMCP SDK</span>
           </div>
-          <h3 class="font-bold text-lg text-white group-hover:text-indigo-400 transition">MCP Masterclass</h3>
-          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
-            Production guide to building secure, scalable Model Context Protocol (MCP) servers using Python and the FastMCP SDK.
+          <h3 class="font-display font-bold text-lg text-white group-hover:text-indigo-400 transition">mcp-masterclass</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Zero-trust Model Context Protocol server guide with GDPR PII masking gateway, EU AI Act Article 12 audit telemetry, and multi-server orchestration.
           </p>
         </div>
-        <div class="mt-6 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-          <span class="px-2 py-1 rounded bg-slate-800">MCP</span>
-          <span class="px-2 py-1 rounded bg-slate-800">FastMCP</span>
-          <span class="px-2 py-1 rounded bg-slate-800">Tool Routing</span>
+        <div class="mt-6 flex flex-wrap gap-1.5 text-xs font-mono text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">MCP</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Zero-Trust</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Audit-Log</span>
         </div>
       </a>
 
-      <!-- Card 4 -->
-      <a href="https://github.com/FirdowsRahaman/aws-end-to-end-mlops-pipeline" target="_blank" class="glass-card rounded-2xl p-6 flex flex-col justify-between group">
+      <!-- 5. Enterprise RAG Eval Suite -->
+      <a href="https://github.com/FirdowsRahaman/enterprise-rag-eval-suite" target="_blank" data-cat="sovereign" class="project-card eu-card rounded-2xl p-6 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400">
+              <i data-lucide="check-check" class="w-5 h-5"></i>
+            </span>
+            <span class="text-xs font-mono text-teal-400 px-2.5 py-1 rounded-md bg-teal-500/10 border border-teal-500/20">EU AI Act Art. 15</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white group-hover:text-teal-400 transition">enterprise-rag-eval-suite</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Production evaluation harness validating the RAG Triad (Context Relevance, Faithfulness, Answer Relevance) and detecting hallucinations in European languages.
+          </p>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-1.5 text-xs font-mono text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">RAG-Triad</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Multilingual</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Quality-Gate</span>
+        </div>
+      </a>
+
+      <!-- 6. Sovereign Cloud Terraform Blueprints -->
+      <a href="https://github.com/FirdowsRahaman/sovereign-cloud-terraform-blueprints" target="_blank" data-cat="infra sovereign" class="project-card eu-card rounded-2xl p-6 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </span>
+            <span class="text-xs font-mono text-purple-400 px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/20">AWS Frankfurt</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white group-hover:text-purple-400 transition">sovereign-cloud-terraform-blueprints</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Zero-egress Terraform/OpenTofu architecture deploying isolated GPU clusters (vLLM) in AWS Frankfurt (`eu-central-1`) with KMS CMK encryption.
+          </p>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-1.5 text-xs font-mono text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Terraform</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">eu-central-1</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Zero-Egress</span>
+        </div>
+      </a>
+
+      <!-- 7. AWS End-to-End MLOps Pipeline -->
+      <a href="https://github.com/FirdowsRahaman/aws-end-to-end-mlops-pipeline" target="_blank" data-cat="infra" class="project-card eu-card rounded-2xl p-6 flex flex-col justify-between group">
         <div>
           <div class="flex items-center justify-between mb-4">
             <span class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
               <i data-lucide="cloud" class="w-5 h-5"></i>
             </span>
-            <span class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded-md bg-white/5 border border-white/5">AWS Production</span>
+            <span class="text-xs font-mono text-amber-400 px-2.5 py-1 rounded-md bg-amber-500/10 border border-amber-500/20">Green AI & ESG</span>
           </div>
-          <h3 class="font-bold text-lg text-white group-hover:text-indigo-400 transition">AWS End-to-End MLOps Pipeline</h3>
-          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
-            Automated ML pipeline on AWS with SageMaker, Lambda, CodePipeline, and IaC (Terraform/CDK) for continuous retraining.
+          <h3 class="font-display font-bold text-lg text-white group-hover:text-amber-400 transition">aws-end-to-end-mlops-pipeline</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Automated MLOps continuous retraining infrastructure defaulting to Frankfurt, integrated with Green AI carbon footprint telemetry tracking (kWh / CO2e).
           </p>
         </div>
-        <div class="mt-6 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-          <span class="px-2 py-1 rounded bg-slate-800">SageMaker</span>
-          <span class="px-2 py-1 rounded bg-slate-800">Terraform</span>
-          <span class="px-2 py-1 rounded bg-slate-800">CI/CD</span>
+        <div class="mt-6 flex flex-wrap gap-1.5 text-xs font-mono text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">SageMaker</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Green-AI</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">CI/CD</span>
         </div>
       </a>
 
-      <!-- Card 5 -->
-      <a href="https://github.com/FirdowsRahaman/From-Tool-to-Teammate-The-Human-Guide-to-the-Age-of-AI-Agents" target="_blank" class="glass-card rounded-2xl p-6 flex flex-col justify-between group">
+      <!-- 8. The Ultimate Collection -->
+      <a href="https://github.com/FirdowsRahaman/the-ultimate-collection" target="_blank" data-cat="all" class="project-card eu-card rounded-2xl p-6 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
+              <i data-lucide="compass" class="w-5 h-5"></i>
+            </span>
+            <span class="text-xs font-mono text-violet-400 px-2.5 py-1 rounded-md bg-violet-500/10 border border-violet-500/20">Universal Index</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white group-hover:text-violet-400 transition">the-ultimate-collection</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Universal directory indexing 110+ standout developer utilities, autonomous AI frameworks, and self-hosted tools across 20 topics.
+          </p>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-1.5 text-xs font-mono text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Directory</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Curated</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">DevTools</span>
+        </div>
+      </a>
+
+      <!-- 9. From Tool to Teammate Book -->
+      <a href="https://github.com/FirdowsRahaman/From-Tool-to-Teammate-The-Human-Guide-to-the-Age-of-AI-Agents" target="_blank" data-cat="agents" class="project-card eu-card rounded-2xl p-6 flex flex-col justify-between group">
         <div>
           <div class="flex items-center justify-between mb-4">
             <span class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400">
               <i data-lucide="book" class="w-5 h-5"></i>
             </span>
-            <span class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded-md bg-white/5 border border-white/5">104 Pages</span>
+            <span class="text-xs font-mono text-rose-400 px-2.5 py-1 rounded-md bg-rose-500/10 border border-rose-500/20">104 Pages</span>
           </div>
-          <h3 class="font-bold text-lg text-white group-hover:text-indigo-400 transition">From Tool to Teammate (Book)</h3>
-          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
-            The Human Guide to the Age of AI Agents — Comprehensive manuscript on autonomous teammates and agent orchestration.
+          <h3 class="font-display font-bold text-lg text-white group-hover:text-rose-400 transition">From Tool to Teammate (Book)</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Authored book exploring the paradigm shift from passive software tools to autonomous, collaborative AI teammates.
           </p>
         </div>
-        <div class="mt-6 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-          <span class="px-2 py-1 rounded bg-slate-800">AI Agents</span>
-          <span class="px-2 py-1 rounded bg-slate-800">Author</span>
-          <span class="px-2 py-1 rounded bg-slate-800">Free PDF</span>
-        </div>
-      </a>
-
-      <!-- Card 6 -->
-      <a href="https://github.com/FirdowsRahaman/ai-ml-fresher-roadmap" target="_blank" class="glass-card rounded-2xl p-6 flex flex-col justify-between group">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400">
-              <i data-lucide="map" class="w-5 h-5"></i>
-            </span>
-            <span class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded-md bg-white/5 border border-white/5">Roadmap</span>
-          </div>
-          <h3 class="font-bold text-lg text-white group-hover:text-indigo-400 transition">AI/ML Engineer Learning Roadmap</h3>
-          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
-            Structured curriculum covering Math, Deep Learning, Generative AI, RAG, Agentic AI, and MLOps interview preparation.
-          </p>
-        </div>
-        <div class="mt-6 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-          <span class="px-2 py-1 rounded bg-slate-800">Learning</span>
-          <span class="px-2 py-1 rounded bg-slate-800">Interview Prep</span>
-          <span class="px-2 py-1 rounded bg-slate-800">RAG</span>
+        <div class="mt-6 flex flex-wrap gap-1.5 text-xs font-mono text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Authored</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">AI-Teammates</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80">Free-PDF</span>
         </div>
       </a>
 
     </div>
   </section>
 
-  <!-- Global AI Governance & Security -->
-  <section id="governance" class="py-16 px-6 max-w-6xl mx-auto">
+  <!-- Interactive EU AI Act Compliance Matrix -->
+  <section id="compliance" class="py-16 px-6 max-w-6xl mx-auto border-t border-white/5">
     <div class="mb-10">
-      <p class="text-xs uppercase tracking-widest text-indigo-400 font-semibold mb-2">Enterprise Trust</p>
-      <h2 class="text-3xl font-bold text-white tracking-tight">Global AI Governance & Architecture</h2>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-3">
+        <span class="w-2 h-2 rounded-full bg-blue-400"></span> European Regulatory Architecture
+      </div>
+      <h2 class="text-3xl font-display font-bold text-white tracking-tight">EU AI Act (Regulation 2024/1689) Implementation Matrix</h2>
+      <p class="text-slate-300 text-sm mt-2 max-w-3xl">
+        How our platform architectures fulfill mandatory European Union requirements for High-Risk AI Systems by design.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-2xl border border-white/10 bg-slate-900/40">
+      <table class="w-full text-left text-sm text-slate-300">
+        <thead class="bg-white/[0.04] text-xs uppercase font-mono text-indigo-300 border-b border-white/10">
+          <tr>
+            <th class="py-4 px-6">EU AI Act Obligation</th>
+            <th class="py-4 px-6">Architectural Implementation</th>
+            <th class="py-4 px-6">Production Artifact & Code Reference</th>
+            <th class="py-4 px-6">Status</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/5 font-light">
+          <tr class="hover:bg-white/[0.02] transition">
+            <td class="py-4 px-6 font-mono font-medium text-white">Article 10: Data Governance</td>
+            <td class="py-4 px-6">Dataset lineage tracking, demographic fairness assertions, synthetic validation.</td>
+            <td class="py-4 px-6 font-mono text-xs text-indigo-300">SageMaker Lineage & Model Monitor</td>
+            <td class="py-4 px-6"><span class="px-2 py-0.5 rounded text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Verified</span></td>
+          </tr>
+          <tr class="hover:bg-white/[0.02] transition">
+            <td class="py-4 px-6 font-mono font-medium text-white">Article 12: Record-Keeping</td>
+            <td class="py-4 px-6">Immutable event logging with SHA-256 cryptographic verification digests.</td>
+            <td class="py-4 px-6 font-mono text-xs text-indigo-300">sovereign-ai-gateway (AuditLogger)</td>
+            <td class="py-4 px-6"><span class="px-2 py-0.5 rounded text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Verified</span></td>
+          </tr>
+          <tr class="hover:bg-white/[0.02] transition">
+            <td class="py-4 px-6 font-mono font-medium text-white">Article 13: Transparency</td>
+            <td class="py-4 px-6">RAG source citation attribution, confidence scoring, explainability heatmaps.</td>
+            <td class="py-4 px-6 font-mono text-xs text-indigo-300">enterprise-rag-eval-suite (RAGTriad)</td>
+            <td class="py-4 px-6"><span class="px-2 py-0.5 rounded text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Verified</span></td>
+          </tr>
+          <tr class="hover:bg-white/[0.02] transition">
+            <td class="py-4 px-6 font-mono font-medium text-white">Article 14: Human Oversight</td>
+            <td class="py-4 px-6">Mandatory interrupt breakpoints prior to high-risk tool execution + kill-switches.</td>
+            <td class="py-4 px-6 font-mono text-xs text-indigo-300">agentic-workflows-masterclass (Ch. 7)</td>
+            <td class="py-4 px-6"><span class="px-2 py-0.5 rounded text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Verified</span></td>
+          </tr>
+          <tr class="hover:bg-white/[0.02] transition">
+            <td class="py-4 px-6 font-mono font-medium text-white">Article 15: Cybersecurity</td>
+            <td class="py-4 px-6">Zero-egress private subnets, KMS customer-managed keys, and prompt firewalls.</td>
+            <td class="py-4 px-6 font-mono text-xs text-indigo-300">sovereign-cloud-terraform-blueprints</td>
+            <td class="py-4 px-6"><span class="px-2 py-0.5 rounded text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Verified</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Global AI Governance & Sovereignty Section -->
+  <section id="sovereignty" class="py-16 px-6 max-w-6xl mx-auto border-t border-white/5">
+    <div class="mb-10">
+      <p class="text-xs uppercase tracking-widest text-indigo-400 font-semibold mb-1">Multi-Jurisdictional Architecture</p>
+      <h2 class="text-3xl font-display font-bold text-white tracking-tight">Sovereign Data Perimeter & Compliance</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="glass-card rounded-2xl p-6">
+      <div class="eu-card rounded-2xl p-6">
         <div class="flex items-center gap-3 mb-4">
           <span class="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-mono text-xs font-bold">EU</span>
-          <h3 class="font-bold text-white text-base">European Union</h3>
+          <h3 class="font-bold text-white text-base">European Union & EMEA</h3>
         </div>
-        <p class="text-xs font-mono text-indigo-400 mb-3">EU AI Act • GDPR • Data Residency</p>
-        <p class="text-slate-400 text-sm leading-relaxed">
-          Architecting systems aligned with EU AI Act risk tiers and GDPR. Provenance tracking, model explainability, algorithmic audit logs, zero-retention pipelines, and sovereign data residency.
+        <p class="text-xs font-mono text-indigo-400 mb-3">EU AI Act • GDPR • Sovereign Cloud</p>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Architecting systems aligned with EU AI Act risk tiers and GDPR. Provenance tracking, model explainability, algorithmic audit logs, zero-retention pipelines, and sovereign data residency in AWS Frankfurt (`eu-central-1`).
         </p>
       </div>
 
-      <div class="glass-card rounded-2xl p-6">
+      <div class="eu-card rounded-2xl p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs font-bold">APAC</span>
+          <h3 class="font-bold text-white text-base">Asia-Pacific Markets</h3>
+        </div>
+        <p class="text-xs font-mono text-emerald-400 mb-3">DPDP Act • Regional Localization</p>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Structuring sovereign hybrid-cloud deployments and cross-border transfer safeguards tailored to national mandates such as India's Digital Personal Data Protection (DPDP) Act and APAC data sovereignty laws.
+        </p>
+      </div>
+
+      <div class="eu-card rounded-2xl p-6">
         <div class="flex items-center gap-3 mb-4">
           <span class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-mono text-xs font-bold">US</span>
           <h3 class="font-bold text-white text-base">United States</h3>
         </div>
         <p class="text-xs font-mono text-indigo-400 mb-3">NIST AI RMF • HIPAA • SOC 2</p>
-        <p class="text-slate-400 text-sm leading-relaxed">
-          Deploying enterprise AI under the NIST AI Risk Management Framework, HIPAA compliance for clinical workflows, PII/PHI anonymization (Presidio), and zero-trust agent authorization layers.
-        </p>
-      </div>
-
-      <div class="glass-card rounded-2xl p-6">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs font-bold">SA</span>
-          <h3 class="font-bold text-white text-base">South Asian Markets</h3>
-        </div>
-        <p class="text-xs font-mono text-indigo-400 mb-3">DPDP Act • Sovereign Cloud</p>
-        <p class="text-slate-400 text-sm leading-relaxed">
-          Structuring regional AI deployments tailored to India's Digital Personal Data Protection (DPDP) Act, local compute residency, and cross-border safeguards.
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Deploying enterprise AI under the NIST AI Risk Management Framework, HIPAA compliance for clinical reproductive health and imaging workflows, and zero-trust agent authorization layers.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Books & Publications -->
-  <section id="book" class="py-16 px-6 max-w-6xl mx-auto border-t border-white/5">
+  <!-- Publications & Honors Section -->
+  <section id="publications" class="py-16 px-6 max-w-6xl mx-auto border-t border-white/5">
     <div class="mb-10">
-      <p class="text-xs uppercase tracking-widest text-indigo-400 font-semibold mb-2">Research & Writing</p>
-      <h2 class="text-3xl font-bold text-white tracking-tight">Publications & Authored Books</h2>
+      <p class="text-xs uppercase tracking-widest text-indigo-400 font-semibold mb-1">Peer Review & Literature</p>
+      <h2 class="text-3xl font-display font-bold text-white tracking-tight">Publications & Research Honors</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+      <div class="eu-card rounded-2xl p-8 flex flex-col justify-between">
         <div>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300 font-mono">104-Page Book</span>
-          <h3 class="text-2xl font-bold text-white mt-4">From Tool to Teammate: The Human Guide to the Age of AI Agents</h3>
-          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
-            By Firdows Rahaman Mollah. A comprehensive exploration of artificial intelligence’s greatest paradigm shift: moving from passive tools to autonomous teammates that work toward our goals.
+          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300 font-mono">104-Page Published Manuscript</span>
+          <h3 class="text-2xl font-display font-bold text-white mt-4">From Tool to Teammate: The Human Guide to the Age of AI Agents</h3>
+          <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+            By Firdows Rahaman. A comprehensive technical exploration of artificial intelligence’s greatest paradigm shift: moving from passive tools that wait for instructions to proactive, autonomous teammates that orchestrate complex enterprise goals.
           </p>
         </div>
         <div class="mt-6">
@@ -308,44 +521,84 @@
         </div>
       </div>
 
-      <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+      <div class="eu-card rounded-2xl p-8 flex flex-col justify-between">
         <div>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 font-mono">IEEE Paper & Honors</span>
-          <h3 class="text-xl font-bold text-white mt-4">IEEE Publication & Kaggle Top 2%</h3>
-          <ul class="mt-4 space-y-3 text-slate-400 text-sm">
-            <li class="flex items-start gap-2">
-              <i data-lucide="award" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
-              <span><strong>Top 2% Winner</strong> — Kaggle Brain Tumor Radiogenomic Classification Challenge.</span>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 font-mono">IEEE Paper & Global Ranking</span>
+          <h3 class="text-xl font-display font-bold text-white mt-4">IEEE Publication & Kaggle Top 2%</h3>
+          <ul class="mt-4 space-y-3.5 text-slate-300 text-sm">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="award" class="w-4 h-4 text-emerald-400 mt-1 shrink-0"></i>
+              <span><strong>Top 2% Global Winner</strong> — Kaggle Brain Tumor Radiogenomic Classification Challenge.</span>
             </li>
-            <li class="flex items-start gap-2">
-              <i data-lucide="file-text" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="file-text" class="w-4 h-4 text-emerald-400 mt-1 shrink-0"></i>
               <span><strong>IEEE Publication</strong> — <i>Electrical Field Distortion Around Man-Made Objects</i>.</span>
             </li>
           </ul>
         </div>
         <div class="mt-6">
           <a href="https://linkedin.com/in/firdowsrahaman" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition">
-            <i data-lucide="external-link" class="w-4 h-4"></i> View LinkedIn Credentials
+            <i data-lucide="external-link" class="w-4 h-4"></i> Verify Credentials on LinkedIn
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-12 border-t border-white/5 bg-[#070b13]">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-      <p>© 2026 Firdows Rahaman Mollah. Built for scalable, governed AI platforms.</p>
-      <div class="flex items-center gap-6">
-        <a href="https://github.com/FirdowsRahaman" target="_blank" class="hover:text-slate-300 transition">GitHub</a>
-        <a href="https://linkedin.com/in/firdowsrahaman" target="_blank" class="hover:text-slate-300 transition">LinkedIn</a>
-        <a href="https://twitter.com/FirdowsRahaman" target="_blank" class="hover:text-slate-300 transition">X / Twitter</a>
+  <!-- Footer (European Minimalist) -->
+  <footer class="py-12 border-t border-white/5 bg-[#05070D]">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-slate-400">
+      <div>
+        <p class="font-medium text-slate-300">Firdows Rahaman • Enterprise AI/ML Lead & Architect</p>
+        <p class="text-xs text-slate-500 mt-1 font-mono">Operating across Central European Time (CET) & International Operations</p>
+      </div>
+
+      <div class="flex items-center gap-6 text-xs font-mono">
+        <a href="https://github.com/FirdowsRahaman" target="_blank" class="hover:text-white transition">GitHub</a>
+        <a href="https://linkedin.com/in/firdowsrahaman" target="_blank" class="hover:text-white transition">LinkedIn</a>
+        <a href="https://twitter.com/FirdowsRahaman" target="_blank" class="hover:text-white transition">X / Twitter</a>
+        <span class="text-slate-600">|</span>
+        <span class="text-emerald-400/80">No Cookies Tracked</span>
       </div>
     </div>
   </footer>
 
   <script>
+    // Initialize Lucide Icons
     lucide.createIcons();
+
+    // Category Filter Mechanism
+    function filterCategory(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        const cardCats = card.getAttribute('data-cat') || '';
+        if (category === 'all' || cardCats.includes(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Interactive Copy Contact
+    function copyEmail() {
+      const email = "contact@firdowsrahaman.com"; // Professional contact address or link
+      navigator.clipboard.writeText("firdowsrahaman@gmail.com").then(() => {
+        const textSpan = document.getElementById('copyEmailText');
+        const originalText = textSpan.innerText;
+        textSpan.innerText = "Email Copied!";
+        setTimeout(() => {
+          textSpan.innerText = originalText;
+        }, 2500);
+      }).catch(() => {
+        window.location.href = "mailto:firdowsrahaman@gmail.com";
+      });
+    }
   </script>
 </body>
 </html>
