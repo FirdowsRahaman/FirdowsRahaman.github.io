@@ -723,6 +723,25 @@
       align-items: center;
     }
 
+    
+    .contact-routes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      max-width: 650px;
+    }
+
+    .route-tag {
+      font-size: 11px;
+      font-weight: 500;
+      color: #b2b6c2;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
     /* Reveal animation */
     .reveal {
       opacity: 0;
@@ -1054,28 +1073,9 @@
 
         <div class="project-list">
 
-          <!-- 01 Sovereign AI Gateway -->
-          <a class="project reveal" href="https://github.com/FirdowsRahaman/sovereign-ai-gateway" target="_blank" rel="noopener noreferrer">
-            <span class="project-number">01</span>
-            <div>
-              <h3 class="project-title">Sovereign AI Gateway & Proxy</h3>
-              <div class="project-tags">
-                <span>FastAPI</span>
-                <span>GDPR Art. 17</span>
-                <span>EU AI Act Art. 12</span>
-                <span>Presidio PII</span>
-              </div>
-            </div>
-            <p class="project-description">
-              Production sovereign AI reverse proxy with Microsoft Presidio PII scrubbing,
-              cryptographic SHA-256 tamper-evident audit logging, and zero data retention before egress.
-            </p>
-            <span class="project-arrow">↗</span>
-          </a>
-
-          <!-- 02 Autonomous Multi-Agent Systems -->
+          <!-- 01 Autonomous Multi-Agent Systems -->
           <a class="project reveal" href="https://github.com/FirdowsRahaman/agentic-workflows-masterclass" target="_blank" rel="noopener noreferrer">
-            <span class="project-number">02</span>
+            <span class="project-number">01</span>
             <div>
               <h3 class="project-title">Autonomous Multi-Agent Systems</h3>
               <div class="project-tags">
@@ -1092,9 +1092,9 @@
             <span class="project-arrow">↗</span>
           </a>
 
-          <!-- 03 Clinical IVF Morphokinetics AI -->
+          <!-- 02 Clinical IVF Morphokinetics AI -->
           <a class="project reveal" href="https://github.com/FirdowsRahaman/clinical-ivf-morphokinetics-ai" target="_blank" rel="noopener noreferrer">
-            <span class="project-number">03</span>
+            <span class="project-number">02</span>
             <div>
               <h3 class="project-title">Clinical IVF Morphokinetics AI</h3>
               <div class="project-tags">
@@ -1107,6 +1107,25 @@
             <p class="project-description">
               Deep learning blastocyst segmentation and developmental event timing (t2, t3, tSB)
               for time-lapse embryology with EU AI Act Annex IV technical documentation.
+            </p>
+            <span class="project-arrow">↗</span>
+          </a>
+
+          <!-- 03 Sovereign AI Gateway -->
+          <a class="project reveal" href="https://github.com/FirdowsRahaman/sovereign-ai-gateway" target="_blank" rel="noopener noreferrer">
+            <span class="project-number">03</span>
+            <div>
+              <h3 class="project-title">Sovereign AI Gateway & Proxy</h3>
+              <div class="project-tags">
+                <span>FastAPI</span>
+                <span>GDPR Art. 17</span>
+                <span>EU AI Act Art. 12</span>
+                <span>Presidio PII</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Production sovereign AI reverse proxy with Microsoft Presidio PII scrubbing,
+              cryptographic SHA-256 tamper-evident audit logging, and zero data retention before egress.
             </p>
             <span class="project-arrow">↗</span>
           </a>
@@ -1342,10 +1361,10 @@
           <div class="experience-item reveal">
             <div class="experience-date">Oct 2023 – Feb 2024</div>
             <div class="experience-content">
-              <h3>Clinical AI & Regulatory Engineering</h3>
+              <h3>AI Research Engineer</h3>
               <div class="role-type">Healthcare Technology · Audited Medical Environments</div>
               <p>
-                Directed the transition of clinical research deep learning models into production workflows aligned with
+                Led the transition of clinical research deep learning models into production workflows aligned with
                 healthcare regulatory compliance. Engineered machine learning pipelines with automated evaluation, versioning,
                 and monitoring, ensuring end-to-end traceability for audited clinical environments.
               </p>
@@ -1355,8 +1374,8 @@
           <div class="experience-item reveal">
             <div class="experience-date">Sep 2021 – Oct 2023</div>
             <div class="experience-content">
-              <h3>Computer Vision & Production MLOps</h3>
-              <div class="role-type">Applied Machine Learning · Containerized Cloud Inference</div>
+              <h3>AI / ML Software Engineer</h3>
+              <div class="role-type">Applied Machine Learning · Computer Vision & NLP</div>
               <p>
                 Built and operationalized end-to-end Computer Vision and NLP solutions using Docker and REST APIs integrated into
                 live business workflows. Owned the complete lifecycle from automated ETL and feature engineering to deployment,
@@ -1368,8 +1387,8 @@
           <div class="experience-item reveal">
             <div class="experience-date">Apr 2021 – Sep 2021</div>
             <div class="experience-content">
-              <h3>Medical Imaging & Diagnostic Systems</h3>
-              <div class="role-type">Deep Learning Research · Clinical Endpoints</div>
+              <h3>Machine Learning Engineer</h3>
+              <div class="role-type">Medical Imaging AI · Deep Learning & Clinical Endpoints</div>
               <p>
                 Developed medical imaging models using U-Net and ResNet encoders for radiology and clinical image segmentation.
                 Engineered transfer-learning architectures deployed on cloud endpoints, validated directly with medical
@@ -1388,12 +1407,18 @@
         <div class="reveal">
           <div class="eyebrow">06 / Contact</div>
           <h2>
-            Have a technical challenge to <span>solve?</span>
+            Want to build <span>multi-agent systems</span> or scale sovereign AI?
           </h2>
           <p class="contact-note">
-            Open to senior engineering leadership, AI architecture, and sovereign systems
-            consulting across Europe, the UK, and international remote teams.
+            Whether you are looking to design autonomous multi-agent workflows, deploy a sovereign AI gateway
+            conforming to the EU AI Act, or architect an enterprise AI intelligence layer — let's connect.
           </p>
+          <div class="contact-routes">
+            <span class="route-tag">Autonomous Multi-Agent Systems</span>
+            <span class="route-tag">Sovereign AI Gateway & GDPR Compliance</span>
+            <span class="route-tag">Enterprise AI Transformation</span>
+            <span class="route-tag">Agentic AI Masterclasses & Advisory</span>
+          </div>
         </div>
 
         <div class="contact-links reveal">
