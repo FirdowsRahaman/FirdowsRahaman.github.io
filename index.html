@@ -959,6 +959,26 @@
     ]
   }
   </script>
+  <!-- Web Analytics -->
+  <script>
+    window.posthog = window.posthog || [];
+    (function () {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://eu-assets.i.posthog.com/static/array.js';
+      s.onload = function () {
+        if (window.posthog && typeof window.posthog.init === 'function') {
+          window.posthog.init('phc_n5jB393QERMtJvB8jV7WfNF2efLpBgNMPFYuDYtfxEKd', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'always'
+          });
+        }
+      };
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    })();
+  </script>
 </head>
 <body>
 
